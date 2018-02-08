@@ -23,7 +23,7 @@ public class Log {
 
 	public static void i(String msg, Object... args) {
 		try {
-			if (SystemPropertiesProxy.getBoolean(DEBUG_TAG, false)) 
+			if (SystemPropertiesProxy.getBoolean(DEBUG_TAG, false)||true)
 				android.util.Log.i(TAG, String.format(msg, args));
 		} catch (MissingFormatArgumentException e) {
 			android.util.Log.e(TAG, "me.abitno.utils.Log", e);
@@ -33,7 +33,7 @@ public class Log {
 
 	public static void d(String msg, Object... args) {
 		try {
-			if (SystemPropertiesProxy.getBoolean(DEBUG_TAG, false)) 
+			if (SystemPropertiesProxy.getBoolean(DEBUG_TAG, false)||true)
 				android.util.Log.d(TAG, String.format(msg, args));
 		} catch (MissingFormatArgumentException e) {
 			android.util.Log.e(TAG, "me.abitno.utils.Log", e);

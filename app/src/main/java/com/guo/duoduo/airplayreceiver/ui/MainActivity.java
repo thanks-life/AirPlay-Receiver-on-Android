@@ -1,6 +1,5 @@
 package com.guo.duoduo.airplayreceiver.ui;
 
-
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
@@ -27,14 +26,18 @@ public class MainActivity extends Activity
 
         setContentView(R.layout.activity_main);
         startListenService();
-        onBackPressed();
+        //onBackPressed();
     }
 
     private void startListenService()
     {
         Intent intent = new Intent(getApplicationContext(), RegisterService.class);
         startService(intent);
-        finish();
+        //finish();
     }
 
+    @Override
+    protected void onResume() {
+        super.onResume();
+    }
 }
